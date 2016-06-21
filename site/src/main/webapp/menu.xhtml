@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+	<h:body>	
+		<p:menubar>
+			<p:submenu label="Livros">
+				<p:menuitem value="Controlar Livros" url="/livros/listarLivros.xhtml"/>
+				<p:menuitem value="Controlar Estoque" url="/livros/estoque.xhtml"/>
+			</p:submenu>
+			<p:submenu label="Categorias">
+				<p:menuitem value="Controlar Categorias" url="/categorias/listarCategorias.xhtml"/>
+			</p:submenu>
+			<p:submenu label="Editoras">
+				<p:menuitem value="Controlar Editoras" url="/editoras/listarEditoras.xhtml"/>
+			</p:submenu>
+			<p:submenu label="Usuarios">
+				<p:menuitem value="Controlar Usuarios" url="/usuarios/listarUsuarios.xhtml"/>
+			</p:submenu>
+			<p:submenu label="Emprestimos">
+				<p:menuitem value="Controlar Emprestimos" url="/emprestimos/listarEmprestimos.xhtml"/>
+				<p:menuitem value="Consultar Emprestimos" url="/emprestimos/consultarEmprestimos.xhtml"/>
+			</p:submenu>
+		</p:menubar>
+	</h:body>
+</html>

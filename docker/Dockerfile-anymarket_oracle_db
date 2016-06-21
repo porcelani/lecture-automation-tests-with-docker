@@ -1,0 +1,12 @@
+FROM       wnameless/oracle-xe-11g
+
+ADD        oracle_assets /assets
+
+RUN	       chmod +x /assets/install.sh
+RUN	       chmod +x /assets/create_user.sql
+RUN	       chmod +x /assets/create_structure.sql
+
+RUN        /assets/install.sh
+
+
+CMD /usr/sbin/startup.sh && /usr/sbin/sshd -D
