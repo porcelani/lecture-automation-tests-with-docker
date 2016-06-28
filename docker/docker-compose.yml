@@ -1,0 +1,29 @@
+server:
+    build: Dockerfile-Server .
+    container_name: jetty-container
+    links:
+      - db:db
+    ports:
+        - "8080:8080"
+db:
+    image: postgres
+    container_name: postgres-container
+    ports:
+        - "5432:5432"
+    environment:
+        POSTGRES_USER: 'postgres'
+        POSTGRES_PASSWORD: 'postgres'
+
+hub:
+    image: selenium/hub
+    container_name: hub-container
+    ports:
+      - "4444:4444"
+
+firefox:
+    image: selenium/node-firefox
+    container_name: firefox-container
+    ports:
+      - "5900:5900"
+    links:
+      - hub:hub

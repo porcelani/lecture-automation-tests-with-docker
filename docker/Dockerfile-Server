@@ -1,0 +1,3 @@
+FROM       jetty
+
+ADD        site-1.0-SNAPSHOT.war ${JETTY_BASE}/webapps/ROOT.war
