@@ -19,11 +19,12 @@ public abstract class GenericDAO <T> implements Serializable {
 	static EntityManagerFactory factory = null;
 	private Class<T> classe;
 
+	public static final String POSTGRES = "postgres";
 	public static final String MYSQL = "mysql";
 	public static final String H2 = "h2";
 
 	static {
-		factory = Persistence.createEntityManagerFactory(H2);
+		factory = Persistence.createEntityManagerFactory(POSTGRES);
 	}
 
 	@SuppressWarnings("unchecked")
