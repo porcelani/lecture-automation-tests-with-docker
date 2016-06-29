@@ -1,5 +1,5 @@
 db:
-    image: postgres
+    image: tdc/postgres
     container_name: postgres-container
     ports:
         - "5432:5432"

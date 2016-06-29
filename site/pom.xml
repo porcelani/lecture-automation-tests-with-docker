@@ -86,13 +86,6 @@
             <version>2.2</version>
         </dependency>
 
-        <!--banco h2-->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.187</version>
-        </dependency>
-
         <!--hibernate-->
         <dependency>
             <groupId>org.hibernate</groupId>

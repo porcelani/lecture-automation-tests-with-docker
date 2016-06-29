@@ -3,22 +3,22 @@
 	  xmlns:p="http://primefaces.org/ui">
 	<h:body>	
 		<p:menubar>
-			<p:submenu label="Livros">
-				<p:menuitem value="Controlar Livros" url="/livros/listarLivros.xhtml"/>
-				<p:menuitem value="Controlar Estoque" url="/livros/estoque.xhtml"/>
+			<p:submenu id="livros" label="Livros">
+				<p:menuitem id="listarLivros" value="Controlar Livros" url="/livros/listarLivros.xhtml"/>
+				<p:menuitem id="estoque" value="Controlar Estoque" url="/livros/estoque.xhtml"/>
 			</p:submenu>
-			<p:submenu label="Categorias">
-				<p:menuitem value="Controlar Categorias" url="/categorias/listarCategorias.xhtml"/>
+			<p:submenu id="categorias" label="Categorias">
+				<p:menuitem  id="listarCategorias" value="Controlar Categorias" url="/categorias/listarCategorias.xhtml"/>
 			</p:submenu>
-			<p:submenu label="Editoras">
-				<p:menuitem value="Controlar Editoras" url="/editoras/listarEditoras.xhtml"/>
+			<p:submenu id="editoras" label="Editoras">
+				<p:menuitem  id="listarEditoras" value="Controlar Editoras" url="/editoras/listarEditoras.xhtml"/>
 			</p:submenu>
-			<p:submenu label="Usuarios">
-				<p:menuitem value="Controlar Usuarios" url="/usuarios/listarUsuarios.xhtml"/>
+			<p:submenu id="usuarios" label="Usuarios">
+				<p:menuitem id="listarUsuarios" value="Controlar Usuarios" url="/usuarios/listarUsuarios.xhtml"/>
 			</p:submenu>
-			<p:submenu label="Emprestimos">
-				<p:menuitem value="Controlar Emprestimos" url="/emprestimos/listarEmprestimos.xhtml"/>
-				<p:menuitem value="Consultar Emprestimos" url="/emprestimos/consultarEmprestimos.xhtml"/>
+			<p:submenu id="emprestimos" label="Emprestimos">
+				<p:menuitem id="listarEmprestimos" value="Controlar Emprestimos" url="/emprestimos/listarEmprestimos.xhtml"/>
+				<p:menuitem  id="consultarEmprestimos" value="Consultar Emprestimos" url="/emprestimos/consultarEmprestimos.xhtml"/>
 			</p:submenu>
 		</p:menubar>
 	</h:body>

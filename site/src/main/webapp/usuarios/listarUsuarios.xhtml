@@ -19,7 +19,7 @@
     	<br/>
         <p:fieldset legend="Sistema de Biblioteca">
           	<h2>Usuários da Biblioteca</h2>
-          	<p:commandButton value="Novo Usuario" actionListener="#{usuarioController.prepararAdicionarUsuario}" update="formCadastro" onclick="PF('catDialog').show()"/>
+          	<p:commandButton id="novoUsuario" value="Novo Usuario" actionListener="#{usuarioController.prepararAdicionarUsuario}" update="formCadastro" onclick="PF('catDialog').show()"/>
           	<br/><br/>
            	<h:form id="listaDeUsuarios">
                 <p:dataTable id="dataTableLista" var="usuario" value="#{usuarioController.listarUsuarios}">
@@ -41,8 +41,7 @@
 				<br/><br/>
 				Nome: <p:inputText id="nome" value="#{usuarioController.usuarioNovo.nome}" /><br/><br/>
 				<br/><br/>
-				<p:commandButton value="Inserir Novo Usuario" actionListener="#{usuarioController.adicionarUsuario}"
-								 onclick="return confirm('Confirma a informação?')" />
+				<p:commandButton value="Inserir Novo Usuario" actionListener="#{usuarioController.adicionarUsuario}"/>
 				<p:commandButton value="Voltar" action="index" onclick="PF('catDialog').hide();"
 								 immediate="true" />
             </h:form>
