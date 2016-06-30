@@ -41,7 +41,8 @@
 				<br/><br/>
 				Nome: <p:inputText id="nome" value="#{usuarioController.usuarioNovo.nome}" /><br/><br/>
 				<br/><br/>
-				<p:commandButton value="Inserir Novo Usuario" actionListener="#{usuarioController.adicionarUsuario}"/>
+               <p:commandButton id="inserirUsuario" value="Inserir Novo Usuario" actionListener="#{usuarioController.adicionarUsuario}"
+                                onclick="return confirm('Confirma a informação?')" />
 				<p:commandButton value="Voltar" action="index" onclick="PF('catDialog').hide();"
 								 immediate="true" />
             </h:form>
