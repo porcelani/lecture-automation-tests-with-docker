@@ -13,7 +13,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 		<class>br.com.biblioteca.Livro</class>
 		<class>br.com.biblioteca.Usuario</class>
 		<properties>
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
