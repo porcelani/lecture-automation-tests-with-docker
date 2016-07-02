@@ -1,5 +1,5 @@
 db:
-    image: postgres
+    image: postgres:9.1.22
     container_name: postgres-container
     ports:
         - "5432:5432"
@@ -13,10 +13,10 @@ server:
     links:
       - db:db
     ports:
-        - "8080:8080"
+        - "80:8080"
 
 hub:
-    image: selenium/hub
+    image: selenium/hub:2.53.0
     container_name: hub-container
     ports:
       - "4444:4444"

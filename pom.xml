@@ -12,7 +12,6 @@
 
     <modules>
         <module>site</module>
-        <module>site-tests</module>
     </modules>
 
     <properties>
