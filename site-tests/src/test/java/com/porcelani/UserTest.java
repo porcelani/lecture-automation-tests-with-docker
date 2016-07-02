@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 
 public class UserTest {
-    private static final String MACHINE_IP = "http://192.168.33.10";
+    private static final String MACHINE_IP = "http://192.168.99.100";
     private WebDriver driver;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
