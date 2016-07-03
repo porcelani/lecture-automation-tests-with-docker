@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 
 public class UserTest {
-    private static final String MACHINE_IP = "http://192.168.99.100";
+    private static final String DOCKER_MACHINE_IP = "http://192.168.99.100";
     private WebDriver driver;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -28,7 +28,7 @@ public class UserTest {
     public void setUp() throws Exception {
         DesiredCapabilities dr = DesiredCapabilities.firefox();
         dr.setPlatform(Platform.LINUX);
-        driver = new RemoteWebDriver(new URL(MACHINE_IP + ":4444/wd/hub"), dr);
+        driver = new RemoteWebDriver(new URL(DOCKER_MACHINE_IP + ":4444/wd/hub"), dr);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -37,7 +37,7 @@ public class UserTest {
 
     @Test
     public void should_create_library_user() throws Exception {
-        driver.get(MACHINE_IP + "/usuarios/listarUsuarios.xhtml");
+        driver.get(DOCKER_MACHINE_IP + "/usuarios/listarUsuarios.xhtml");
         By novoUsuario = By.id("novoUsuario");
         driver.findElement(novoUsuario).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(novoUsuario));
